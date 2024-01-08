@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "MyAddon",
+    "version": "1.0",
+    "description": "Description of your addon",
+    "icons": {
+      "48": "icon.png"
+    },
+    "permissions": ["storage"],
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "MyAddon"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": ["script.js"]
+  }
+  
